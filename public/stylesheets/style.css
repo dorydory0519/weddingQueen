@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+html * {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+html body {
+  padding-top: 55px;
+}
+html body .wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+html body .wrapper header {
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  background: #f2f2f2;
+}
+html body .wrapper header .container {
+  max-width: 960px;
+  background: #f2f2f2;
+  padding-right: 0;
+}
+html body .wrapper header .container li a:hover,
+html body .wrapper header .container li a:focus {
+  color: hotpink;
+}
+html body .wrapper header .container li.active a {
+  background: none;
+  color: pink;
+  -webkit-box-shadow: inset 0 -3px 0 #ffc0cb;
+  -moz-box-shadow: inset 0 -3px 0 #ffc0cb;
+  box-shadow: inset 0 -3px 0 #ffc0cb;
+}
+html body .wrapper header .container li.active a:hover,
+html body .wrapper header .container li.active a:focus {
+  background: none;
+  color: pink;
+}
+html body .wrapper header .container li.dropdown .dropdown-menu {
+  min-width: 245px;
+  padding: 10px;
+}
+html body .wrapper header .container li.dropdown .col-lg-8 {
+  padding-left: 0;
+}
+html body .wrapper a.navbar-brand {
+  border-left: 1px solid #e2e2e2;
+}
+html body .wrapper a.navbar-brand:hover {
+  color: pink;
+}
+html body .wrapper a {
+  border-right: 1px solid #e2e2e2;
+}
+html body section#main-content {
+  padding-left: 15px;
+  background: #fafafc;
+  border: 1px solid lightgray;
+}
+html body footer {
+  background: #330000;
+}
+html body footer .container {
+  max-width: 960px;
+  color: white;
+}
+@media (max-width: 768px) {
+  body .wrapper {
+    width: 100% !important;
+  }
+  body .wrapper .container {
+    width: 100% !important;
+  }
+  header .container {
+    padding-right: 15px !important;
+  }
+}

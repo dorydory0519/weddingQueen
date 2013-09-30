@@ -1,0 +1,41 @@
+<!-- Embedded JavaScript -->
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <title>Rest Api Test!!</title>    
+    <!-- Provided Assets -->
+    <script src="/javascripts/ext/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <script src="/javascripts/ext/modernizr.js" type="text/javascript"></script>
+    <script src="/javascripts/ext/Underscore-min.js" type="text/javascript"></script>
+    <script src="/javascripts/ext/Backbone-min.js" type="text/javascript"></script>
+
+    <link href="/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+
+    <!-- Customized Assets -->
+    <script src="/javascripts/app/layout.js" type="text/javascript"></script>
+    <link href="/stylesheets/style.css" type="text/css" rel="stylesheet">
+
+    <!-- Page Specific Assets -->
+    <%-scripts%>
+    <%-stylesheets%>
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+        <header class="navbar navbar-inverse navbar-fixed-top">
+          <% include include/header.ejs %>
+        </header>
+
+        <section id="main-content">
+          <%- body -%>
+        </section>
+
+        <footer class="navbar navbar-inverse navbar-fixed-bottom">
+          <% include include/footer.ejs %>
+        </footer>
+    </div>
+  </body>
+</html>
