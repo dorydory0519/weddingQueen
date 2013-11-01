@@ -1,11 +1,18 @@
 <!-- Embedded JavaScript -->
 
+<% script('/javascripts/app/photo-post.js') -%>
 <% layout('../layout') -%>
 
 <h1>올릴거 여기에 써 시밸루마.</h1>
-<form action="/photo" method="POST">
+<form id="photo-post-form" action="/photo" method="POST">
   <input name="url" type="text" placeholder="URL"/>
-  <input name="text" type="text" placeholder="TEXT"/>
-  <input name="tag" type="text" placeholder="TAG"/>
+  <input name="text" type="text" placeholder="TEXT"/>  
+  <select name="tag">
+    <option value="accessary">악세사리</option>
+    <option value="makeup">메이크업</option>
+    <option value="dress">드레스</option>
+    <option value="studio">스튜디오</option>
+    <option value="ETC">기타</option>
+  </select>
   <input type="submit" />
 </form>

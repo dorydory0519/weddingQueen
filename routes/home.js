@@ -1,11 +1,18 @@
-module.exports = function (app) {
+module.exports = function (app, Photo) {
   // home page
 
   app.get('/', function (req, res) {
-    res.render('index', {
-      title: 'Home Page.  ',
-      activeMenu: 'home'
-    })
+    Photo.find(function (err, photos) {
+      if (!err) {
+        res.render('index', {
+          title: 'Home Page.  ',
+          activeMenu: 'home',
+          photos: photos
+        });
+      } else {
+        console.log("Mongoose : collection \'Photo\' select failure");
+      }
+    });
   });
   // nexus page
   app.get('/weddinglist', function (req, res) {

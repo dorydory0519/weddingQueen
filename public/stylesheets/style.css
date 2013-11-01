@@ -12,6 +12,7 @@ html * {
 }
 html body {
   padding-top: 55px;
+  background: #f2f2f2;
 }
 html body .wrapper {
   width: 960px;
@@ -20,11 +21,11 @@ html body .wrapper {
 html body .wrapper header {
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
-  background: #f2f2f2;
+  background: white;
 }
 html body .wrapper header .container {
   max-width: 960px;
-  background: #f2f2f2;
+  background: white;
   padding-right: 0;
 }
 html body .wrapper header .container li a:hover,
@@ -51,16 +52,21 @@ html body .wrapper header .container li.dropdown .col-lg-8 {
   padding-left: 0;
 }
 html body .wrapper a.navbar-brand {
+  padding: 5px;
   border-left: 1px solid #e2e2e2;
 }
 html body .wrapper a.navbar-brand:hover {
   color: pink;
 }
+html body .wrapper a.navbar-brand img {
+  width: 80px;
+}
 html body .wrapper a {
   border-right: 1px solid #e2e2e2;
 }
 html body section#main-content {
-  padding-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 60px;
   background: #fafafc;
   border: 1px solid lightgray;
 }

@@ -8,14 +8,30 @@ module.exports = function (app, Photo) {
 
     photo.save(function (err, data) {
       if (!err) {
-        //
-        // 반환합니다. _id 값 포함되어 있는것입니다. !!!!!!!!!
-        //
         var result = { status: "ok", _id: data._id };
         return res.send(result);
       }
     });
 
+  });
+
+  app.get('/photo', function (req, res) {
+    var filter = req.query.filter;
+    if( filter == 'all') {
+        Photo.find(function (err, data) {
+        if (!err) {
+          var result = { status: "ok", _id: data._id, datas: data };
+          return res.send(result);
+        }
+      });     
+    } else {
+      Photo.find({ tag: filter }, function (err, data) {
+        if (!err) {
+          var result = { status: "ok", _id: data._id, datas: data };
+          return res.send(result);
+        }
+      });      
+    }
   });
 }
 

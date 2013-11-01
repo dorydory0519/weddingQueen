@@ -11,7 +11,8 @@ html {
 
   body {
     padding-top: 55px;
-
+    background: #f2f2f2; //
+    
     .wrapper {
       width: @pagewidth;
       margin: 0 auto;
@@ -19,11 +20,11 @@ html {
       header {
         border-top: 1px solid #e2e2e2;
         border-bottom: 1px solid #e2e2e2;
-        background: #f2f2f2;
+        background: white; //
 
         .container {
           max-width: @pagewidth;
-          background: #f2f2f2;
+          background: white;//
           padding-right: 0;
           
           li {
@@ -62,9 +63,13 @@ html {
       }
       
       a.navbar-brand {
+        padding: 5px;
         border-left: 1px solid #e2e2e2;
         &:hover {
           color: pink;
+        }
+        img {
+          width: 80px;
         }
       }
 
@@ -76,7 +81,7 @@ html {
 
     section#main-content {
       margin-top: 20px;
-      padding-left: 15px;
+      margin-bottom: 60px;
       background: #fafafc;
       border: 1px solid lightgray;
     }

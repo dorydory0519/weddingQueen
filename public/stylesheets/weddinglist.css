@@ -1,0 +1,20 @@
+section.category-gallery {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+section.category-gallery .wg-categories ul#wg-category-lists {
+  text-align: center;
+  padding-left: 0;
+}
+section.category-gallery .wg-categories ul#wg-category-lists li.wg-category-icon {
+  list-style-type: none;
+  margin-left: 5px;
+  display: inline;
+}
+section.category-gallery .wg-categories ul#wg-category-lists li.wg-category-icon:hover {
+  cursor: pointer;
+}
+section.category-gallery .wg-categories ul#wg-category-lists li.wg-category-icon img {
+  height: 17px;
+}

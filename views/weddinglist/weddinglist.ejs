@@ -2,9 +2,21 @@
 
 <% layout('../layout') -%>
 
-<% script('javascripts/app/weddinglist.js') -%>
-<% stylesheet('stylesheets/weddinglist.css') -%>
+<% script('/javascripts/ext/gridalicious.js') -%>
+<% script('/javascripts/app/weddinglist.js') -%>
+<% stylesheet('/stylesheets/weddinglist.css') -%>
 
-<p>
-    WHAT??
-</p>
+<section class="category-gallery clearfix">
+  <div class="wg-categories">
+    <ul id="wg-category-lists" class="clearfix">
+      <li class="wg-category-icon"><img src="/images/icons/all.png" alt="All"/></li>
+      <li class="wg-category-icon"><img src="/images/icons/dress.png" alt="Dress"/></li>
+      <li class="wg-category-icon"><img src="/images/icons/makeup.png" alt="Makeup"/></li>
+      <li class="wg-category-icon"><img src="/images/icons/studio.png" alt="Studio"/></li>
+      <li class="wg-category-icon"><img src="/images/icons/accessary.png" alt="Accessary"/></li>
+      <li class="wg-category-icon"><img src="/images/icons/etc.png" alt="ETC"/></li>
+    </ul>
+  </div>  
+  <div id="categorized-photos">
+  </div>
+</section>

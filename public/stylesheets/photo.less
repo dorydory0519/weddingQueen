@@ -1,0 +1,123 @@
+@import "../elementless/elements.less";
+
+section.photo-gallery {
+  width: 735px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+
+// Main Page Photos
+.wq-photo-model {
+  margin-top: 30px;
+
+  .wq-photo-owner {
+    width: 80px;
+    height: 80px;
+    float: left;
+    border: 1px solid lightgray;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .wq-photo {
+    float: left;
+    width: 620px;
+    margin-left: 30px;
+    position: relative;
+    * > { 
+      .transition-duration(0.2s);
+    }
+      
+    img.wq-photo-image {
+      width: 100%;
+    }
+
+    &:hover {
+      img.wq-photo-image {
+        opacity: 0.6;
+      }
+      .wq-photo-overlay {
+        display: block;
+      }
+    }
+      
+    .wq-photo-overlay {
+      display: none;
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      margin-left: -50px;
+      img {
+        .rounded(6px);  
+      }
+        
+      p.likes {
+        font-weight: bold;
+        text-align:  center;
+        font-size:  1.4em;
+        color:  rgb(255,151,151);
+      }        
+    }
+  }
+}
+
+
+//Category Page Photos
+.wg-category-photo-model {
+  .wg-category-photo-owner {
+    width: 80px;
+    height: 80px;
+    float: left;
+    border: 1px solid lightgray;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .wg-category-photo {
+    float: left;
+    //width: 30%;
+    position: relative;
+    * > { 
+      .transition-duration(0.2s);
+    }
+      
+    img.wg-category-photo-image {
+      width: 100%;
+    }
+
+    &:hover {
+      img.wg-category-photo-image {
+        opacity: 0.6;
+      }
+      .wg-category-photo-overlay {
+        display: block;
+      }
+    }
+      
+    .wg-category-photo-overlay {
+      display: none;
+      position: absolute;
+      top: 36%;
+      left: 48%;
+      margin-left: -50px;
+      img {
+        width: 40px !important;
+        display: inline !important;
+        .rounded(6px);
+      }
+        
+      p.likes {
+        display:  inline;
+        font-weight: bold;
+        text-align:  center;
+        font-size:  1.4em;
+        color:  rgb(255,151,151);
+      }        
+    }
+  }
+}

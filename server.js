@@ -27,15 +27,20 @@ nconf.env().file({ file: 'settings.json' });
 /**
 * DATABASE CONFIG.
 **/
-mongoose.connect('mongodb://localhost/my_database');
 
-var photo = mongoose.model('Photo', new mongoose.Schema({
+mongoose.connect('mongodb://localhost/my_database');
+mongoose.connection.on('error', function () {
+  console.log("Mongodb connection fail.");
+});
+
+var PhotoSchema = new mongoose.Schema({
   text: String,
   done: Boolean,
   url: String,
   tag: String
-}));
+});
 
+var Photo = mongoose.model('photo', PhotoSchema);
 
 /**
 * EVERYAUTH AUTHENTICATION
@@ -209,8 +214,7 @@ app.configure(function () {
   app.use(everyauth.middleware(app));
   app.use(app.router);
   app.use(require('less-middleware')({
-    src: __dirname + '/public',
-    force: true
+    src: __dirname + '/public'
   }));
 
   app.use(express.static(path.join(__dirname, '/public')));
@@ -225,10 +229,10 @@ app.configure('development', function () {
 * -------------------------------------------------------------------------------------------------
 * include a route file for each major area of functionality in the site
 **/
-require('./routes/home')(app);
+require('./routes/home')(app, Photo);
 require('./routes/account')(app);
 require('./routes/weddinglist')(app);
-require('./routes/REST')(app, photo);
+require('./routes/REST')(app, Photo);
 
 
 var server = http.createServer(app);
